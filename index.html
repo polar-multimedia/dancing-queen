@@ -609,6 +609,11 @@ select option{background:#1a1208;color:var(--cream)}
       <option value="triple">Triple amenaza</option>
       <option value="ensemble">Ensemble</option>
     </select>
+    <select id="filtPago" onchange="render()">
+      <option value="">— Pago —</option>
+      <option value="remun">💰 Remunerado</option>
+      <option value="coop">🤝 Cooperativa</option>
+    </select>
     <select id="sort" onchange="render()">
       <option value="fecha_pub">Más recientes</option>
       <option value="cierre">Cierre próximo</option>
@@ -1035,10 +1040,13 @@ function setMercado(m, el){
 function getFiltered(){
   const q = document.getElementById('q').value.toLowerCase();
   const rol = document.getElementById('filtRol').value;
+  const pago = document.getElementById('filtPago').value;
   const sortBy = document.getElementById('sort').value;
   let list = DATA.filter(c=>{
     if(activeMercado !== 'ALL' && c.mercado !== activeMercado) return false;
     if(rol && !(c.tipo_rol||'').includes(rol)) return false;
+    if(pago === 'remun' && c.remunerado !== true) return false;
+    if(pago === 'coop' && c.remunerado !== false) return false;
     if(q){
       const hay = [c.titulo,c.empresa,c.ciudad,c.descripcion_corta||'',
                    ...(c.tags||[])].join(' ').toLowerCase();
