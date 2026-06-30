@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project: Dancing Queen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Oswald:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #080603;
+  --s1:       #0f0b06;
+  --s2:       #1a1208;
+  --card:     #110e08;
+  --card2:    #160f07;
+
+  --gold:     #d4a017;
+  --gold2:    #f0c040;
+  --gold3:    #fff3b0;
+  --goldglow: rgba(212,160,23,.25);
+  --crimson:  #9b1d20;
+  --crimson2: #c0392b;
+  --cream:    #f5ecd7;
+  --cream2:   #e8d5a3;
+  --warm:     #c9a96e;
+  --muted:    #7a6a4a;
+  --muted2:   #a08c5e;
+  --border:   rgba(212,160,23,.18);
+  --border2:  rgba(212,160,23,.35);
+  --text:     #f0e6cc;
+
+  --mx:    #5fba7d;
+  --usa:   #6fa8dc;
+  --es:    #e06c3a;
+  --latam: #b07fd0;
+  --int:   #d07fb0;
+
+  --serif:  'Playfair Display', Georgia, serif;
+  --cond:   'Oswald', 'Arial Narrow', sans-serif;
+  --body:   'EB Garamond', Georgia, serif;
+  --r: 4px;
+  --r-lg: 6px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:16px;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(ellipse 100% 60% at 50% -10%, rgba(180,130,10,.07) 0%, transparent 60%);
+}
+
+/* ── BULB STRIP ─────────────────────────────────────────────────────────── */
+.bulb-strip{
+  display:flex;justify-content:center;align-items:center;gap:14px;
+  padding:8px 0;
+  background:linear-gradient(180deg,#1a1005 0%,#0f0a04 100%);
+  border-bottom:1px solid rgba(212,160,23,.2);
+  overflow:hidden;
+}
+.bulb{
+  width:10px;height:10px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%, var(--gold3), var(--gold));
+  box-shadow:0 0 6px 2px var(--goldglow),0 0 12px 3px rgba(212,160,23,.15);
+  flex-shrink:0;animation:flicker 3s ease-in-out infinite;
+}
+.bulb:nth-child(2n){animation-delay:.4s}
+.bulb:nth-child(3n){animation-delay:.8s;animation-duration:2.7s}
+.bulb:nth-child(5n){animation-delay:1.2s;animation-duration:3.3s}
+.bulb:nth-child(7n){animation-delay:1.8s;animation-duration:2.5s}
+@keyframes flicker{
+  0%,100%{opacity:1;box-shadow:0 0 6px 2px var(--goldglow),0 0 12px 3px rgba(212,160,23,.15)}
+  50%{opacity:.82;box-shadow:0 0 4px 1px var(--goldglow),0 0 8px 2px rgba(212,160,23,.1)}
+  75%{opacity:.95}
+}
+
+/* ── HERO ────────────────────────────────────────────────────────────────── */
+.hero{
+  position:relative;overflow:hidden;
+  text-align:center;
+  padding:48px 24px 36px;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 0%, rgba(212,160,23,.12) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(155,29,32,.08) 0%, transparent 50%),
+    linear-gradient(180deg, #120d05 0%, var(--bg) 100%);
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a017' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.playbill-band{
+  display:inline-block;
+  background:var(--gold);
+  color:#1a0e00;
+  font-family:var(--cond);font-weight:700;font-size:.7rem;
+  letter-spacing:4px;text-transform:uppercase;
+  padding:4px 20px;margin-bottom:16px;
+  clip-path:polygon(8px 0%,calc(100% - 8px) 0%,100% 50%,calc(100% - 8px) 100%,8px 100%,0% 50%);
+}
+.hero-stars{
+  color:var(--gold);font-size:.85rem;letter-spacing:8px;
+  margin-bottom:12px;display:block;opacity:.7;
+}
+.hero h1{
+  font-family:var(--serif);font-weight:900;font-style:italic;
+  font-size:clamp(2.4rem,6vw,4.2rem);
+  line-height:1.05;letter-spacing:-1px;
+  background:linear-gradient(160deg, var(--gold3) 0%, var(--gold2) 40%, var(--gold) 70%, var(--warm) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  text-shadow:none;
+  filter:drop-shadow(0 2px 20px rgba(212,160,23,.3));
+}
+.hero-rule{
+  width:160px;height:1px;margin:18px auto;
+  background:linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.hero-sub{
+  font-family:var(--cond);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;
+  color:var(--warm);opacity:.85;
+}
+.hero-badges{
+  display:flex;gap:8px;justify-content:center;flex-wrap:wrap;
+  margin-top:20px;
+}
+.hero-badge{
+  font-family:var(--cond);font-weight:600;font-size:.7rem;letter-spacing:2px;
+  text-transform:uppercase;padding:5px 14px;
+  border:1px solid;border-radius:2px;
+}
+.hb-mx   {border-color:rgba(95,186,125,.4);color:var(--mx)}
+.hb-usa  {border-color:rgba(111,168,220,.4);color:var(--usa)}
+.hb-es   {border-color:rgba(224,108,58,.4);color:var(--es)}
+.hb-latam{border-color:rgba(176,127,208,.4);color:var(--latam)}
+.hb-int  {border-color:rgba(208,127,176,.4);color:var(--int)}
+.hero-update{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:20px;padding:6px 18px;
+  border:1px solid var(--border);border-radius:2px;
+  font-family:var(--cond);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--muted2);background:rgba(212,160,23,.04);
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--mx);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ── CONTROLS ────────────────────────────────────────────────────────────── */
+.controls-wrap{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,6,3,.92);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.controls-top{
+  max-width:1400px;margin:0 auto;
+  padding:12px 24px;
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+}
+.search-wrap{position:relative;flex:1;min-width:200px}
+.search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.4;pointer-events:none;color:var(--gold)}
+.search-wrap input{
+  width:100%;padding:9px 12px 9px 38px;
+  background:rgba(212,160,23,.05);
+  border:1px solid var(--border);border-radius:var(--r);
+  color:var(--text);font-family:var(--cond);font-size:.82rem;letter-spacing:.5px;
+  outline:none;transition:border-color .2s;
+}
+.search-wrap input:focus{border-color:var(--gold)}
+.search-wrap input::placeholder{color:var(--muted);font-style:italic}
+select{
+  padding:9px 30px 9px 12px;
+  background:rgba(212,160,23,.05);border:1px solid var(--border);border-radius:var(--r);
+  color:var(--cream2);font-family:var(--cond);font-size:.8rem;letter-spacing:.5px;
+  outline:none;cursor:pointer;appearance:none;transition:border-color .2s;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23d4a017' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 10px center;
+}
+select:focus{border-color:var(--gold)}
+select option{background:#1a1208;color:var(--cream)}
+.controls-filters{
+  max-width:1400px;margin:0 auto;
+  padding:0 24px 10px;
+  display:flex;gap:6px;flex-wrap:wrap;
+  border-top:1px solid rgba(212,160,23,.06);
+}
+.btn-filter{
+  font-family:var(--cond);font-weight:600;font-size:.72rem;letter-spacing:1.5px;
+  text-transform:uppercase;padding:6px 14px;border-radius:var(--r);
+  border:1px solid var(--border);background:transparent;color:var(--muted2);
+  cursor:pointer;transition:all .2s;
+}
+.btn-filter:hover,.btn-filter.active{border-color:var(--gold);color:var(--gold);background:rgba(212,160,23,.08)}
+.btn-filter[data-m="MX"].active   {border-color:var(--mx);color:var(--mx);background:rgba(95,186,125,.08)}
+.btn-filter[data-m="USA"].active  {border-color:var(--usa);color:var(--usa);background:rgba(111,168,220,.08)}
+.btn-filter[data-m="ES"].active   {border-color:var(--es);color:var(--es);background:rgba(224,108,58,.08)}
+.btn-filter[data-m="LATAM"].active{border-color:var(--latam);color:var(--latam);background:rgba(176,127,208,.08)}
+.btn-filter[data-m="INT"].active  {border-color:var(--int);color:var(--int);background:rgba(208,127,176,.08)}
+
+/* ── RESULTS BAR ─────────────────────────────────────────────────────────── */
+.results-bar{
+  max-width:1400px;margin:0 auto;
+  padding:14px 24px 4px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.results-bar .rb-left{
+  font-family:var(--cond);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);
+}
+.results-bar .rb-left strong{color:var(--gold)}
+.results-bar .rb-right{font-family:var(--cond);font-size:.7rem;color:var(--muted);letter-spacing:.5px}
+
+/* ── GRID ────────────────────────────────────────────────────────────────── */
+.grid{
+  max-width:1400px;margin:0 auto;
+  padding:12px 20px 80px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+  gap:12px;
+}
+
+/* ── CARD ────────────────────────────────────────────────────────────────── */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  transition:border-color .25s,transform .2s,box-shadow .25s;
+  cursor:pointer;position:relative;
+}
+.card:hover{
+  border-color:var(--border2);
+  transform:translateY(-2px);
+  box-shadow:0 6px 40px rgba(0,0,0,.6),0 0 0 1px rgba(212,160,23,.08);
+}
+/* marquee top stripe */
+.card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg, var(--crimson), var(--gold), var(--crimson2));
+  opacity:.85;
+}
+/* subtle texture */
+.card::after{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='1' height='1' fill='%23d4a017' fill-opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events:none;border-radius:var(--r-lg);
+}
+
+/* card top */
+.card-top{padding:18px 18px 12px;position:relative;z-index:1}
+.card-row1{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px}
+.card-flag{
+  flex-shrink:0;padding:3px 10px;border-radius:2px;
+  font-family:var(--cond);font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  border:1px solid;
+}
+.flag-MX   {border-color:rgba(95,186,125,.35);color:var(--mx);background:rgba(95,186,125,.07)}
+.flag-USA  {border-color:rgba(111,168,220,.35);color:var(--usa);background:rgba(111,168,220,.07)}
+.flag-ES   {border-color:rgba(224,108,58,.35);color:var(--es);background:rgba(224,108,58,.07)}
+.flag-LATAM{border-color:rgba(176,127,208,.35);color:var(--latam);background:rgba(176,127,208,.07)}
+.flag-INT  {border-color:rgba(208,127,176,.35);color:var(--int);background:rgba(208,127,176,.07)}
+
+.card-fechas{
+  font-family:var(--cond);font-size:.68rem;color:var(--muted);
+  letter-spacing:.5px;display:flex;align-items:center;gap:5px;
+}
+.card-title{
+  font-family:var(--serif);font-weight:700;font-size:1rem;
+  line-height:1.4;color:var(--cream);margin-bottom:5px;
+}
+.card-company{
+  font-family:var(--cond);font-size:.75rem;font-weight:500;letter-spacing:.5px;
+  color:var(--warm);display:flex;align-items:center;gap:6px;
+}
+.card-divider{
+  width:100%;height:1px;margin:10px 0;
+  background:linear-gradient(90deg, var(--border), transparent);
+}
+
+/* pills */
+.pill-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.pill{
+  font-family:var(--cond);font-size:.65rem;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
+  padding:3px 9px;border-radius:2px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:var(--muted2);
+}
+.pill-remun {background:rgba(95,186,125,.1);border-color:rgba(95,186,125,.25);color:var(--mx)}
+.pill-bili  {background:rgba(212,160,23,.1);border-color:rgba(212,160,23,.25);color:var(--gold2)}
+.pill-urgent{background:rgba(155,29,32,.2);border-color:rgba(155,29,32,.5);color:#e07070;
+             animation:urgentPulse 2s ease-in-out infinite}
+.pill-pronto{background:rgba(224,108,58,.1);border-color:rgba(224,108,58,.3);color:var(--es)}
+@keyframes urgentPulse{0%,100%{opacity:1}50%{opacity:.7}}
+
+/* description preview */
+.card-desc{
+  font-family:var(--body);font-size:.82rem;color:var(--muted2);
+  line-height:1.6;margin-top:8px;font-style:italic;
+}
+
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.tag{
+  font-family:var(--cond);font-size:.62rem;letter-spacing:.5px;
+  padding:2px 7px;border-radius:2px;
+  background:rgba(212,160,23,.05);border:1px solid rgba(212,160,23,.12);color:var(--muted);
+}
+
+/* toggle */
+.card-toggle{
+  width:100%;padding:9px 18px;position:relative;z-index:1;
+  background:rgba(212,160,23,.04);
+  border:none;border-top:1px solid var(--border);
+  font-family:var(--cond);font-size:.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:background .2s,color .2s;
+}
+.card-toggle:hover{background:rgba(212,160,23,.1);color:var(--gold)}
+.card-toggle svg{transition:transform .3s}
+.card.open .card-toggle{color:var(--gold);background:rgba(212,160,23,.08)}
+.card.open .card-toggle svg{transform:rotate(180deg)}
+
+/* expanded */
+.card-detail{
+  display:none;padding:0 18px 18px;
+  position:relative;z-index:1;
+  border-top:1px solid var(--border);
+}
+.card.open .card-detail{display:block;animation:slideDown .2s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+/* detail sections */
+.detail-section{margin-top:16px}
+.detail-label{
+  font-family:var(--cond);font-size:.65rem;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px;display:flex;align-items:center;gap:6px;
+}
+.detail-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+.detail-text{font-family:var(--body);font-size:.85rem;color:var(--muted2);line-height:1.7;font-style:italic}
+
+/* bento mini grid */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.bento-cell{
+  background:rgba(212,160,23,.04);border:1px solid var(--border);
+  border-radius:var(--r);padding:10px 12px;
+}
+.bento-cell .bc-label{
+  font-family:var(--cond);font-size:.6rem;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:3px;
+}
+.bento-cell .bc-val{font-family:var(--body);font-size:.82rem;color:var(--cream2);font-weight:400}
+
+/* lists */
+.detail-list{
+  padding-left:16px;
+  font-family:var(--body);font-size:.83rem;color:var(--muted2);line-height:1.8;
+}
+.detail-list li::marker{color:var(--gold);font-size:.7em}
+
+/* contact */
+.contact-box{
+  margin-top:14px;padding:12px 16px;border-radius:var(--r);
+  background:linear-gradient(135deg,rgba(155,29,32,.15),rgba(212,160,23,.08));
+  border:1px solid rgba(212,160,23,.25);
+}
+.contact-label{
+  font-family:var(--cond);font-size:.65rem;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:8px;
+}
+.contact-item{
+  display:flex;align-items:flex-start;gap:8px;
+  font-family:var(--body);font-size:.82rem;color:var(--muted2);margin-top:5px;line-height:1.5;
+}
+.contact-item a{color:var(--gold);text-decoration:none;font-weight:400}
+.contact-item a:hover{text-decoration:underline;color:var(--gold2)}
+
+/* CTA */
+.cta-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.btn-primary{
+  flex:1;padding:10px 16px;border-radius:var(--r);
+  background:linear-gradient(135deg,var(--crimson) 0%,var(--crimson2) 50%,#b02a20 100%);
+  border:1px solid rgba(212,160,23,.3);
+  color:var(--gold2);
+  font-family:var(--cond);font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:all .2s;
+}
+.btn-primary:hover{
+  background:linear-gradient(135deg,#b82428 0%,#d43526 50%,#c22822 100%);
+  border-color:rgba(212,160,23,.5);
+  box-shadow:0 4px 20px rgba(155,29,32,.4);
+}
+.btn-secondary{
+  padding:10px 14px;border-radius:var(--r);
+  background:transparent;border:1px solid var(--border);
+  color:var(--muted);
+  font-family:var(--cond);font-size:.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;
+  transition:all .2s;
+}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold2)}
+
+/* ── EMPTY ───────────────────────────────────────────────────────────────── */
+.empty{
+  grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--muted);
+  font-family:var(--serif);font-style:italic;
+}
+.empty-icon{font-size:3rem;display:block;margin-bottom:16px;opacity:.4}
+.empty h3{font-size:1.4rem;color:var(--cream2);margin-bottom:8px}
+
+/* ── FOOTER BULB STRIP ───────────────────────────────────────────────────── */
+.footer{
+  text-align:center;padding:28px 20px;
+  border-top:1px solid var(--border);
+  font-family:var(--cond);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);
+}
+.footer span{color:var(--gold);opacity:.6}
+
+/* ── SCROLLBAR ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:rgba(212,160,23,.2);border-radius:2px}
+::-webkit-scrollbar-thumb:hover{background:rgba(212,160,23,.4)}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BULB STRIP -->
+<div class="bulb-strip" id="topBulbs"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="playbill-band">✦ Now Casting ✦</div>
+  <span class="hero-stars">✦ · · · · ✦ · · · · ✦ · · · · ✦</span>
+  <h1>Project: Dancing Queen</h1>
+  <div class="hero-rule"></div>
+  <div class="hero-sub">Castings de Teatro Musical &nbsp;·&nbsp; Bilingüe &nbsp;·&nbsp; MX → Mundo</div>
+  <div class="hero-badges">
+    <span class="hero-badge hb-mx">🇲🇽 México</span>
+    <span class="hero-badge hb-usa">🇺🇸 USA</span>
+    <span class="hero-badge hb-es">🇪🇸 España</span>
+    <span class="hero-badge hb-latam">🌎 LATAM</span>
+    <span class="hero-badge hb-int">🌐 Internacional</span>
+  </div>
+  <div class="hero-update">
+    <span class="dot"></span>
+    <span id="last-update">Cargando datos...</span>
+  </div>
+</div>
+
+<!-- BOTTOM BULB STRIP -->
+<div class="bulb-strip" id="botBulbs" style="border-top:1px solid rgba(212,160,23,.2);border-bottom:none"></div>
+
+<!-- CONTROLS -->
+<div class="controls-wrap">
+  <div class="controls-top">
+    <div class="search-wrap">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="q" type="text" placeholder="Buscar casting, rol, ciudad..." oninput="render()">
+    </div>
+    <select id="filtRol" onchange="render()">
+      <option value="">— Todos los roles —</option>
+      <option value="bailarín">Bailarín/a</option>
+      <option value="cantante">Cantante</option>
+      <option value="actor">Actor / Actriz</option>
+      <option value="triple">Triple amenaza</option>
+      <option value="ensemble">Ensemble</option>
+    </select>
+    <select id="sort" onchange="render()">
+      <option value="fecha_pub">Más recientes</option>
+      <option value="cierre">Cierre próximo</option>
+      <option value="remun">Remunerados primero</option>
+    </select>
+  </div>
+  <div class="controls-filters">
+    <button class="btn-filter active" data-m="ALL" onclick="setMercado('ALL',this)">✦ Todos</button>
+    <button class="btn-filter" data-m="MX"    onclick="setMercado('MX',this)">🇲🇽 México</button>
+    <button class="btn-filter" data-m="USA"   onclick="setMercado('USA',this)">🇺🇸 USA</button>
+    <button class="btn-filter" data-m="ES"    onclick="setMercado('ES',this)">🇪🇸 España</button>
+    <button class="btn-filter" data-m="LATAM" onclick="setMercado('LATAM',this)">🌎 LATAM</button>
+    <button class="btn-filter" data-m="INT"   onclick="setMercado('INT',this)">🌐 Internacional</button>
+  </div>
+</div>
+
+<div class="results-bar">
+  <div class="rb-left">Mostrando <strong id="cnt">0</strong> convocatorias</div>
+  <div class="rb-right" id="upd-note"></div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="bulb-strip" style="border-top:1px solid rgba(212,160,23,.2);border-bottom:none"></div>
+<div class="footer">
+  <span>✦</span> &nbsp; Project: Dancing Queen &nbsp; · &nbsp; Teatro Musical &nbsp; · &nbsp; Powered by Polar Multimedia &nbsp; <span>✦</span>
+</div>
+
+<script>
+// ── BULB GENERATOR ────────────────────────────────────────────────────────
+function makeBulbs(id, count=40){
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.innerHTML = Array.from({length:count},()=>'<div class="bulb"></div>').join('');
+}
+makeBulbs('topBulbs', 50);
+makeBulbs('botBulbs', 50);
+
+// ── DATA ──────────────────────────────────────────────────────────────────
+let DATA = [];
+let activeMercado = 'ALL';
+
+const inDays = d => { const dt=new Date(); dt.setDate(dt.getDate()+d); return dt.toISOString().split('T')[0]; };
+
+const REAL = [
+  {
+    id:'es-1',
+    titulo:'Bailarines/as para "Tributo a Tina Turner"',
+    empresa:'La Opción Producciones',
+    mercado:'ES', idioma:'español',
+    ciudad:'Madrid', pais:'España',
+    tipo_rol:'bailarín',
+    fecha_pub:'2026-06-23', fecha_cierre: inDays(35),
+    remunerado:true,
+    descripcion_corta:'Se buscan bailarines y bailarinas de 18 a 35 años para espectáculo musical tributo a Tina Turner en Madrid.',
+    descripcion_completa:'Producción profesional remunerada de homenaje a la leyenda Tina Turner en Madrid. Ensayos agosto–septiembre.',
+    que_buscan:['Bailarines y bailarinas de 18 a 35 años','Excelente base técnica de danza','Ritmo y gran expresividad escénica','Disponibilidad agosto–septiembre para ensayos'],
+    que_entregar:['Self-tape bailando (obligatorio)','Enviar enlace al video al postularse'],
+    contacto:{web:'laopcion.es',tipo:'Plataforma',nota:'Postularse a través de clandestinodeactores.com'},
+    ensayos:'Agosto–septiembre, Madrid',
+    estreno:'Temporada 2026–2027',
+    url_directo:true,
+    url:'https://clandestinodeactores.com/castings/49300-bailarines-y-bailarinas-para-espectaculo-musical-tina-',
+    fuente:'clandestinodeactores.com',
+    tags:['tina turner','tributo','madrid','remunerado','self-tape'],
+  },
+  {
+    id:'es-2',
+    titulo:'Bailarines/as para "Moulin Rouge!" Madrid 2027',
+    empresa:'Stage Entertainment España',
+    mercado:'ES', idioma:'español',
+    ciudad:'Madrid', pais:'España',
+    tipo_rol:'bailarín',
+    fecha_pub:'2026-06-09', fecha_cierre: inDays(20),
+    remunerado:true,
+    descripcion_corta:'Stage Entertainment busca bailarines para el estreno de Moulin Rouge! en el Stage Gran Teatro Musical de Madrid en 2027.',
+    descripcion_completa:'Moulin Rouge! llega a Madrid en 2027 en producción oficial de Stage Entertainment. Elenco de lanzamiento de una de las producciones más importantes del año en España.',
+    que_buscan:['Bailarines/as de 18 a 35 años','Alto nivel técnico (múltiples estilos)','Presencia escénica y versatilidad'],
+    que_entregar:['Candidatura vía clandestinodeactores.com','Perfil artístico completo en la plataforma'],
+    contacto:{web:'stage.es',tipo:'Web oficial',nota:'Postularse a través de la plataforma Clandestino'},
+    ensayos:'Por definir, Madrid',
+    estreno:'2027 — Stage Gran Teatro Musical, Madrid',
+    url_directo:true,
+    url:'https://clandestinodeactores.com/castings/49163-bailarines-y-bailarinas-para-musical-moulin-rouge-en-m',
+    fuente:'clandestinodeactores.com',
+    tags:['moulin rouge','stage entertainment','madrid','2027','gran producción'],
+  },
+  {
+    id:'es-3',
+    titulo:'Actores/Actrices Cantantes — "La Historia Interminable"',
+    empresa:'beon Entertainment',
+    mercado:'ES', idioma:'español',
+    ciudad:'Valladolid', pais:'España',
+    tipo_rol:'cantante',
+    fecha_pub:'2026-05-29', fecha_cierre: inDays(5),
+    remunerado:true,
+    descripcion_corta:'Actores y actrices cantantes para "La Historia Interminable" en Teatro Calderón de Valladolid. Funciones 4–20 septiembre.',
+    descripcion_completa:'beon Entertainment produce este musical en el prestigioso Teatro Calderón. Producción profesional completamente remunerada.',
+    que_buscan:['Actriz cantante 16–20 años: soprano con belting y voz mixta','Actores/actrices cantantes 18–45 años: jazz, urbana, claqué','Actor cantante 35–50 años: tenor hasta sol4/G4','Actor cantante 30–40 años: tenor/barítono, voz mixta','Actrices cantantes 28–50 años: soprano/mezzo con potente belting'],
+    que_entregar:['Video cantando pieza musical de libre elección (obligatorio)','Enviar ANTES del viernes 5 de junio'],
+    contacto:{web:'beon-entertainment.com',tipo:'Web oficial',nota:'Postular en clandestinodeactores.com'},
+    ensayos:'Previo a funciones, Valladolid',
+    estreno:'4–20 septiembre 2026, Teatro Calderón',
+    url_directo:true,
+    url:'https://clandestinodeactores.com/castings/49053-actores-y-actrices-cantantes-para-musical-la-historia-',
+    fuente:'clandestinodeactores.com',
+    tags:['la historia interminable','valladolid','cantante','belting','voz mixta','urgente'],
+  },
+  {
+    id:'es-4',
+    titulo:'Cantantes para Gira Internacional "Forever" (Michael Jackson)',
+    empresa:'Summum Music',
+    mercado:'ES', idioma:'español',
+    ciudad:'Madrid / Gira Internacional', pais:'España',
+    tipo_rol:'cantante',
+    fecha_pub:'2026-05-19', fecha_cierre: inDays(14),
+    remunerado:true,
+    descripcion_corta:'Gira internacional de "Forever, the best show about the King of Pop". Cantante hombre y mujer con estilo y registro de Michael Jackson.',
+    descripcion_completa:'Summum Music produce este espectáculo de gira internacional dedicado a Michael Jackson, viajando por España, Europa y Latinoamérica.',
+    que_buscan:['Cantante hombre (+18 años): tenor agudo, estilo y registro de Michael Jackson','Cantante mujer (+18 años): soprano/mezzo racializada con buen registro agudo','Se valora dominio e imagen estilo Motown'],
+    que_entregar:['Video presentación cantando pieza de libre elección (obligatorio)','Enviar video al postularse en la plataforma'],
+    contacto:{web:'summummusic.com',tipo:'Web oficial',nota:'Candidatura vía clandestinodeactores.com'},
+    ensayos:'Madrid (fecha por confirmar)',
+    estreno:'Gira internacional — España + Europa',
+    url_directo:true,
+    url:'https://clandestinodeactores.com/castings/48932-cantantes-para-espectaculo-musical-forever-the-best-sh',
+    fuente:'clandestinodeactores.com',
+    tags:['michael jackson','gira internacional','tenor','soprano','summum music'],
+  },
+  {
+    id:'latam-1',
+    titulo:'Cantantes, Actores y Bailarines — Teatro Musical CABA',
+    empresa:'Legión Musical BA',
+    mercado:'LATAM', idioma:'español',
+    ciudad:'Buenos Aires (CABA)', pais:'Argentina',
+    tipo_rol:'triple',
+    fecha_pub:'2026-06-24', fecha_cierre:'2026-07-30',
+    remunerado:false,
+    descripcion_corta:'Obra de teatro musical con audición presencial el 7 de julio en CABA. Estreno: abril 2027. Ensayos martes 18–21hs.',
+    descripcion_completa:'Proyecto de teatro musical con estreno programado para abril 2027. Modalidad cooperativa con producción. Ensayos semanales martes.',
+    que_buscan:['Cantantes: balada rockera y tema pop ligero en castellano','Perfil vocal: voces claras y de timbre limpio','Bailarines: aprenderán coreografía el día de la audición','Actores/actrices con habilidades múltiples'],
+    que_entregar:['CV artístico + link a Instagram','Enviar ANTES del 30 de julio a legionmusical.ba@gmail.com','Audición presencial: 7/7 de 18 a 21 hs (CABA)'],
+    contacto:{email:'legionmusical.ba@gmail.com',tipo:'Email directo',nota:'Audición presencial: 7 de julio, 18–21hs, CABA'},
+    ensayos:'Martes 18–21hs a partir del 4 de agosto, CABA',
+    estreno:'Abril 2027',
+    url_directo:true,
+    url:'https://www.alternativateatral.com/casting265863-cantantes-actoresactrices-y-bailarines-para-obra-de-teatro-musical',
+    fuente:'alternativateatral.com',
+    tags:['teatro musical','caba','cooperativa','audición 7 julio','email directo'],
+  },
+  {
+    id:'latam-2',
+    titulo:'Actores Bailarines 20–30 años — "Saja Boys" Infantil',
+    empresa:'Compañía Teatro Infantil CABA',
+    mercado:'LATAM', idioma:'español',
+    ciudad:'Buenos Aires (CABA)', pais:'Argentina',
+    tipo_rol:'bailarín',
+    fecha_pub:'2026-06-22', fecha_cierre: inDays(12),
+    remunerado:false,
+    descripcion_corta:'Actores bailarines para los "Saja Boys" en obra infantil que se estrena en vacaciones de invierno. Cooperativa con producción.',
+    descripcion_completa:'Producción de teatro infantil con estreno en vacaciones de invierno 2026 en CABA. Requiere combinación de danza y actuación.',
+    que_buscan:['Actores bailarines de 20 a 30 años','Experiencia en danza y actuación','Buena presencia escénica','Disponibilidad en vacaciones de invierno'],
+    que_entregar:['CV artístico con fotos','Links a trabajo previo (videos, redes)'],
+    contacto:{tipo:'Vía Alternativa Teatral',nota:'Contactar a través del botón en la convocatoria'},
+    ensayos:'CABA, a confirmar',
+    estreno:'Vacaciones de invierno 2026',
+    url_directo:true,
+    url:'https://www.alternativateatral.com/casting265835-actores-bailarines-de-20-a-30-anos-para-interpretar-a-los-saja-boys-disponibilidad-en-vacaciones-de-invierno',
+    fuente:'alternativateatral.com',
+    tags:['infantil','bailarín','saja boys','vacaciones invierno','caba'],
+  },
+  {
+    id:'latam-3',
+    titulo:'Actriz Cantante 25–35 años — Proyecto Cooperativa CABA',
+    empresa:'Proyecto Teatral Independiente',
+    mercado:'LATAM', idioma:'español',
+    ciudad:'Buenos Aires (CABA)', pais:'Argentina',
+    tipo_rol:'cantante',
+    fecha_pub:'2026-06-25', fecha_cierre:'2026-07-09',
+    remunerado:false,
+    descripcion_corta:'Actriz cantante de 25 a 35 años para proyecto teatral cooperativa en CABA. Contacto: pedrocanoppia@gmail.com',
+    descripcion_completa:'Proyecto teatral en desarrollo con modalidad cooperativa. Buscan intérprete con habilidades combinadas de actuación y canto.',
+    que_buscan:['Actriz cantante de 25 a 35 años','Habilidades combinadas: actuación + canto','Disponibilidad para ensayos en CABA'],
+    que_entregar:['Enviar CV y material artístico a pedrocanoppia@gmail.com'],
+    contacto:{email:'pedrocanoppia@gmail.com',tipo:'Email directo'},
+    ensayos:'CABA, a confirmar',
+    estreno:'Por definir',
+    url_directo:true,
+    url:'https://www.alternativateatral.com/casting265903-una-actriz-cantante-de-25-a-35-anos-para-proyecto-teatral-en-cooperativa',
+    fuente:'alternativateatral.com',
+    tags:['actriz','cantante','cooperativa','caba','independiente'],
+  },
+  {
+    id:'latam-4',
+    titulo:'Audiciones Abiertas — "FRANCISCO, el Musical"',
+    empresa:'Francisco Musical',
+    mercado:'LATAM', idioma:'español',
+    ciudad:'Buenos Aires', pais:'Argentina',
+    tipo_rol:'triple',
+    fecha_pub:'2026-05-20', fecha_cierre: inDays(18),
+    remunerado:false,
+    descripcion_corta:'Audiciones abiertas para obra colectiva y transformadora. Actores, cantantes e intérpretes comprometidos. Inscripción vía formulario Google.',
+    descripcion_completa:'Proyecto de teatro musical colectivo que busca artistas con compromiso y sensibilidad. Proceso de creación compartida con valores comunitarios fuertes.',
+    que_buscan:['Actores/actrices con vocación y compromiso','Cantantes con interés en teatro','Intérpretes sensibles','Personas con ganas de construir en equipo'],
+    que_entregar:['Llenar formulario oficial: forms.gle/NEkVyRuV276yEf1z7'],
+    contacto:{web:'forms.gle/NEkVyRuV276yEf1z7',tipo:'Formulario Google',nota:'Link directo al formulario de inscripción'},
+    ensayos:'Buenos Aires, a confirmar',
+    estreno:'Por definir',
+    url_directo:true,
+    url:'https://www.castingscinetv.com/2026/05/argentina-audiciones-abiertas-para.html',
+    fuente:'castingscinetv.com',
+    tags:['francisco musical','audición abierta','ba','formulario'],
+  },
+  {
+    id:'usa-1',
+    titulo:'Precision Dancers & Lead Vocalists — "Christmas in the Air"',
+    empresa:"MGM's Beau Rivage",
+    mercado:'USA', idioma:'inglés',
+    ciudad:'Biloxi, MS', pais:'Estados Unidos',
+    tipo_rol:'triple',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(40),
+    remunerado:true,
+    descripcion_corta:"MGM's Beau Rivage busca Precision Dancers, Male Lead Vocalists, Host/MC y Santa Claus para producción navideña de lujo. Totalmente remunerada.",
+    descripcion_completa:'Producción premium de entretenimiento en vivo para casino resort MGM. Espectáculo navideño de alto nivel con producción profesional completa.',
+    que_buscan:['Precision Dancers (hombres y mujeres)','Male Lead Vocalists','Host/MC con presencia y carisma','Actor para Santa Claus'],
+    que_entregar:['Reel de actuación/danza','Grabación vocal','Postular vía Playbill Jobs'],
+    contacto:{web:'playbill.com/jobs',tipo:'Playbill Jobs'},
+    ensayos:'Biloxi, MS (fechas por confirmar)',
+    estreno:'Temporada navideña 2026',
+    url_directo:true,
+    url:'https://playbill.com/job/christmas-in-the-air-at-mgms-beau-rivage-precision-dancers-male-lead-vocalists-host-santa-claus/3e27c3e9-e5d8-4ab5-a7d2-206daa92287e',
+    fuente:'playbill.com',
+    tags:['mgm','casino','navidad','precision dance','vocalist','remunerado'],
+  },
+  {
+    id:'usa-2',
+    titulo:'2026–27 Season Auditions — The Arsenal Company',
+    empresa:'The Arsenal Company',
+    mercado:'USA', idioma:'inglés',
+    ciudad:'New York, NY', pais:'Estados Unidos',
+    tipo_rol:'actor',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(30),
+    remunerado:false,
+    descripcion_corta:'Compañía de teatro de Nueva York busca performers para su temporada 2026-27. Audiciones generales en NYC.',
+    descripcion_completa:'The Arsenal Company es una compañía de teatro de Nueva York que produce trabajo original e innovador. Audiciones generales para la temporada completa.',
+    que_buscan:['Performers para temporada 2026-27','Actores/actrices de todos los tipos','Compromiso con teatro contemporáneo'],
+    que_entregar:['Monólogo(s) de contraste','Postular vía Playbill Jobs'],
+    contacto:{web:'playbill.com/jobs',tipo:'Playbill Jobs'},
+    ensayos:'New York, NY',
+    estreno:'Temporada 2026-27',
+    url_directo:true,
+    url:'https://playbill.com/job/the-arsenal-company-2026-27-auditions/673013d2-db8d-4a2c-9cee-739f1937a81d',
+    fuente:'playbill.com',
+    tags:['arsenal company','nyc','off-broadway','temporada'],
+  },
+  {
+    id:'usa-3',
+    titulo:'Submissions 2026-27 — Suncoast Broadway (Florida)',
+    empresa:'Suncoast Broadway',
+    mercado:'USA', idioma:'inglés',
+    ciudad:'Hudson, FL', pais:'Estados Unidos',
+    tipo_rol:'triple',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(25),
+    remunerado:true,
+    descripcion_corta:'Compañía de teatro musical regional profesional en Florida busca submissions para la temporada completa 2026-27. Remunerado.',
+    descripcion_completa:'Suncoast Broadway es una compañía de teatro musical profesional regional en Florida. Múltiples producciones en la temporada.',
+    que_buscan:['Actores/actrices de teatro musical','Cantantes con experiencia en musical','Bailarines/as con formación en danza teatral'],
+    que_entregar:['Self-tape de actuación y canto','Envío vía Playbill Jobs'],
+    contacto:{web:'playbill.com/jobs',tipo:'Playbill Jobs'},
+    ensayos:'Hudson, FL',
+    estreno:'Temporada 2026-27',
+    url_directo:true,
+    url:'https://playbill.com/job/suncoast-seeking-submissions-for-the-2026-2027-season/b7a4c25c-fa40-445f-89cc-e78d1f2d5b55',
+    fuente:'playbill.com',
+    tags:['florida','regional','submissions','remunerado','self-tape'],
+  },
+  {
+    id:'usa-4',
+    titulo:'Spark Musical Theatre Festival NYC — Submissions',
+    empresa:'Emerging Artists Theatre',
+    mercado:'USA', idioma:'inglés',
+    ciudad:'New York, NY', pais:'Estados Unidos',
+    tipo_rol:'triple',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(22),
+    remunerado:false,
+    descripcion_corta:'Festival de nuevos musicales en NYC busca performers emergentes. Excelente vitrina para artistas en Manhattan.',
+    descripcion_completa:'Emerging Artists Theatre organiza el Spark Festival, vitrina para nuevos musicales y artistas emergentes en Nueva York.',
+    que_buscan:['Performers de teatro musical emergentes','Actores/actrices, cantantes, bailarines','Interés en trabajo con material nuevo'],
+    que_entregar:['Material de presentación artística','Submissions vía Playbill Jobs'],
+    contacto:{web:'playbill.com/jobs',tipo:'Playbill Jobs'},
+    ensayos:'New York, NY',
+    estreno:'Festival NYC 2026',
+    url_directo:true,
+    url:'https://playbill.com/job/spark-musical-theatre-festival-nyc-seeking-submissions/42c29d06-d5d4-44e6-8e83-8370592eb842',
+    fuente:'playbill.com',
+    tags:['spark festival','nyc','emerging artists','festival','off-broadway'],
+  },
+  {
+    id:'mx-1',
+    titulo:'Castings Teatro Musical MX — Convocatorias Activas',
+    empresa:'CastingsCineTV México',
+    mercado:'MX', idioma:'español',
+    ciudad:'CDMX / Nacional', pais:'México',
+    tipo_rol:'triple',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(30),
+    remunerado:null,
+    descripcion_corta:'Portal con convocatorias diarias para teatro, danza y musicales en México. Actualización constante. CDMX, Guadalajara, Monterrey y más.',
+    descripcion_completa:'Plataforma que agrega castings de toda la república mexicana con actualización diaria. Incluye producciones institucionales e independientes.',
+    que_buscan:['Actores y actrices de todas las edades','Cantantes para producciones musicales','Bailarines/as para espectáculos'],
+    que_entregar:['Depende de cada convocatoria','Generalmente: CV artístico + fotos + video'],
+    contacto:{web:'castingscinetv.com',tipo:'Portal web',nota:'Registrarse para acceder a todas las convocatorias'},
+    ensayos:'Variable por producción',
+    estreno:'Variable',
+    url_directo:false,
+    url:'https://www.castingscinetv.com/search/label/Teatro',
+    fuente:'castingscinetv.com',
+    tags:['méxico','cdmx','castings diarios','portal'],
+  },
+  {
+    id:'mx-2',
+    titulo:'Convocatorias de Danza y Teatro — Teatro UNAM',
+    empresa:'UNAM / DGAPA',
+    mercado:'MX', idioma:'español',
+    ciudad:'CDMX', pais:'México',
+    tipo_rol:'bailarín',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(45),
+    remunerado:true,
+    descripcion_corta:'Teatro UNAM publica convocatorias para sus espacios escénicos: Covarrubias, Juan Ruiz de Alarcón, Foro Sor Juana. Producciones institucionales remuneradas.',
+    descripcion_completa:'La UNAM ofrece convocatorias periódicas para sus múltiples espacios escénicos de primer nivel en CDMX.',
+    que_buscan:['Bailarines y bailarinas profesionales','Actores/actrices con experiencia escénica','Cantantes para producciones musicales','Artistas interdisciplinarios'],
+    que_entregar:['CV artístico actualizado','Portfolio/reel según convocatoria','Carta de motivos (algunas convocatorias)'],
+    contacto:{web:'teatrounam.com.mx/teatro/rubros/convocatorias/',tipo:'Portal UNAM',nota:'Revisar la página de convocatorias periódicamente'},
+    ensayos:'Instalaciones UNAM, CDMX',
+    estreno:'Variable por temporada',
+    url_directo:false,
+    url:'https://teatrounam.com.mx/teatro/rubros/convocatorias/',
+    fuente:'teatrounam.com.mx',
+    tags:['unam','institucional','cdmx','danza','remunerado'],
+  },
+  {
+    id:'mx-3',
+    titulo:'Audiciones Abiertas — OnlineCasting México',
+    empresa:'OnlineCasting MX',
+    mercado:'MX', idioma:'español',
+    ciudad:'CDMX / Nacional', pais:'México',
+    tipo_rol:'actor',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(30),
+    remunerado:null,
+    descripcion_corta:'Principal directorio de audiciones en México. Cine, TV, teatro y publicidad en toda la república. Registro gratuito.',
+    descripcion_completa:'Plataforma líder en México para encontrar castings. Cubre producciones de CDMX y todo el país.',
+    que_buscan:['Actores y actrices de toda edad','Bailarines para diversas producciones','Cantantes y performers'],
+    que_entregar:['Registro gratuito en la plataforma','Perfil completo con fotos y CV artístico'],
+    contacto:{web:'onlinecasting.mx',tipo:'Portal — Registro gratuito',nota:'Crear perfil para acceder a todas las audiciones'},
+    ensayos:'Variable',
+    estreno:'Variable',
+    url_directo:false,
+    url:'https://www.onlinecasting.mx/auditions.asp',
+    fuente:'onlinecasting.mx',
+    tags:['méxico','portal','teatro','tv','cine','registro gratuito'],
+  },
+  {
+    id:'int-1',
+    titulo:'Bilingual Performers — Musical Theatre & Cruise Ships',
+    empresa:'StarNow International',
+    mercado:'INT', idioma:'bilingüe',
+    ciudad:'Internacional / Remote', pais:'Internacional',
+    tipo_rol:'triple',
+    fecha_pub:'2026-06-29', fecha_cierre: inDays(60),
+    remunerado:true,
+    descripcion_corta:'StarNow conecta performers bilingües (español/inglés) con producciones de cruceros, parques temáticos y giras internacionales. Postulaciones desde México.',
+    descripcion_completa:'Plataforma global de casting para artistas bilingües. Disney, Royal Caribbean, Norwegian, Universal Parks y giras internacionales.',
+    que_buscan:['Performers bilingües (inglés/español)','Triple amenaza: actúa, baila y canta','Disposición para viajar o reubicarse','Experiencia en teatro musical o entretenimiento en vivo'],
+    que_entregar:['Perfil completo en StarNow (fotos profesionales, video)','Self-tape de actuación, canto y danza','Postularse directamente a oportunidades relevantes'],
+    contacto:{web:'starnow.com',tipo:'Plataforma global',nota:'Crear perfil en starnow.com — cuenta freemium disponible'},
+    ensayos:'Variable / Internacional',
+    estreno:'Variable',
+    url_directo:false,
+    url:'https://www.starnow.com/jobs/?q=musical+theatre',
+    fuente:'starnow.com',
+    tags:['internacional','bilingüe','crucero','disney','triple amenaza'],
+  },
+];
+
+// ── ENGINE ─────────────────────────────────────────────────────────────────
+async function loadData(){
+  let loaded = false;
+  try{
+    const r = await fetch('castings.json?t='+Date.now());
+    if(r.ok){
+      const d = await r.json();
+      if(d.castings && d.castings.length > 0){
+        DATA = d.castings;
+        const dt = new Date(d.ultima_actualizacion);
+        document.getElementById('last-update').textContent =
+          'Actualizado ' + dt.toLocaleDateString('es-MX',{day:'numeric',month:'long',year:'numeric'});
+        loaded = true;
+      }
+    }
+  } catch(e){}
+  if(!loaded){
+    DATA = REAL;
+    document.getElementById('last-update').textContent =
+      'Castings verificados · ' + new Date().toLocaleDateString('es-MX',{day:'numeric',month:'long',year:'numeric'});
+    document.getElementById('upd-note').textContent = 'Ejecuta bailarina_scraper.py para actualizar datos en vivo';
+  }
+  render();
+}
+
+function setMercado(m, el){
+  activeMercado = m;
+  document.querySelectorAll('.btn-filter').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  render();
+}
+
+function getFiltered(){
+  const q = document.getElementById('q').value.toLowerCase();
+  const rol = document.getElementById('filtRol').value;
+  const sortBy = document.getElementById('sort').value;
+  let list = DATA.filter(c=>{
+    if(activeMercado !== 'ALL' && c.mercado !== activeMercado) return false;
+    if(rol && !(c.tipo_rol||'').includes(rol)) return false;
+    if(q){
+      const hay = [c.titulo,c.empresa,c.ciudad,c.descripcion_corta||'',
+                   ...(c.tags||[])].join(' ').toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  if(sortBy==='cierre')  list.sort((a,b)=>(a.fecha_cierre||'').localeCompare(b.fecha_cierre||''));
+  else if(sortBy==='remun') list.sort((a,b)=>(b.remunerado?1:0)-(a.remunerado?1:0));
+  else list.sort((a,b)=>(b.fecha_pub||'').localeCompare(a.fecha_pub||''));
+  return list;
+}
+
+function daysUntil(iso){ if(!iso) return 99; return Math.ceil((new Date(iso)-new Date())/86400000); }
+function fmtDate(iso){
+  if(!iso) return '—';
+  try{ return new Date(iso+'T12:00:00').toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric'}); }
+  catch{ return iso; }
+}
+function escH(s){ return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : ''; }
+
+const ML = {MX:'🇲🇽 México',USA:'🇺🇸 USA',ES:'🇪🇸 España',LATAM:'🌎 LATAM',INT:'🌐 Internacional'};
+
+function cardHTML(c){
+  const d = daysUntil(c.fecha_cierre);
+  let urgPill = '';
+  if(d<=5)   urgPill = `<span class="pill pill-urgent">⚡ ${d}d para cerrar</span>`;
+  else if(d<=14) urgPill = `<span class="pill pill-pronto">⏳ Cierra en ${d}d</span>`;
+
+  const remPill = c.remunerado===true ? '<span class="pill pill-remun">✦ Remunerado</span>'
+                : c.remunerado===false ? '<span class="pill">Cooperativa</span>' : '';
+  const bili = (c.idioma||'').includes('bilingüe') ? '<span class="pill pill-bili">✦ Bilingüe</span>' : '';
+  const rolPill = c.tipo_rol ? `<span class="pill">${escH(c.tipo_rol)}</span>` : '';
+  const tags = (c.tags||[]).slice(0,5).map(t=>`<span class="tag">${escH(t)}</span>`).join('');
+
+  const queBuscan = (c.que_buscan||[]).map(x=>`<li>${escH(x)}</li>`).join('');
+  const queEntregar = (c.que_entregar||[]).map(x=>`<li>${escH(x)}</li>`).join('');
+  const contacto = c.contacto ? buildContacto(c.contacto) : '';
+
+  const cta = c.url_directo
+    ? `<a class="btn-primary" href="${escH(c.url)}" target="_blank" rel="noopener">Ver convocatoria &nbsp;→</a>`
+    : `<a class="btn-secondary" href="${escH(c.url)}" target="_blank" rel="noopener">Ver en la fuente &nbsp;↗</a>`;
+
+  return `
+<div class="card" data-m="${escH(c.mercado)}" data-id="${escH(c.id)}" onclick="handleCardClick(event,'${escH(c.id)}')">
+  <div class="card-top">
+    <div class="card-row1">
+      <span class="card-flag flag-${escH(c.mercado)}">${escH(ML[c.mercado]||c.mercado)}</span>
+      <span class="card-fechas">📅 ${fmtDate(c.fecha_cierre)}</span>
+    </div>
+    <div class="card-title">${escH(c.titulo)}</div>
+    <div class="card-company">🏢 ${escH(c.empresa)} &nbsp;·&nbsp; 📍 ${escH(c.ciudad)}</div>
+    <div class="card-divider"></div>
+    <div class="pill-row">${rolPill}${remPill}${bili}${urgPill}</div>
+    <div class="card-desc">${escH(c.descripcion_corta||'')}</div>
+    ${tags ? `<div class="tags">${tags}</div>` : ''}
+  </div>
+
+  <button class="card-toggle" onclick="toggleCard(event,'${escH(c.id)}')">
+    Ver ficha completa &nbsp;
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+
+  <div class="card-detail">
+    ${c.descripcion_completa ? `
+    <div class="detail-section">
+      <div class="detail-label">La Producción</div>
+      <div class="detail-text">${escH(c.descripcion_completa)}</div>
+    </div>` : ''}
+
+    <div class="bento">
+      <div class="bento-cell">
+        <div class="bc-label">Ensayos</div>
+        <div class="bc-val">${escH(c.ensayos||'Por confirmar')}</div>
+      </div>
+      <div class="bento-cell">
+        <div class="bc-label">Estreno</div>
+        <div class="bc-val">${escH(c.estreno||'Por confirmar')}</div>
+      </div>
+    </div>
+
+    ${queBuscan ? `
+    <div class="detail-section">
+      <div class="detail-label">Qué buscan</div>
+      <ul class="detail-list">${queBuscan}</ul>
+    </div>` : ''}
+
+    ${queEntregar ? `
+    <div class="detail-section">
+      <div class="detail-label">Cómo postularse</div>
+      <ul class="detail-list">${queEntregar}</ul>
+    </div>` : ''}
+
+    ${contacto}
+
+    <div class="cta-row">
+      ${cta}
+      <button class="btn-secondary" onclick="copyLink(event,'${escH(c.url)}')">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar link
+      </button>
+    </div>
+  </div>
+</div>`;
+}
+
+function buildContacto(c){
+  if(!c) return '';
+  let items = '';
+  if(c.email) items += `<div class="contact-item">📧 &nbsp;<a href="mailto:${escH(c.email)}">${escH(c.email)}</a></div>`;
+  if(c.web)   items += `<div class="contact-item">🌐 &nbsp;<a href="https://${escH(c.web)}" target="_blank" rel="noopener">${escH(c.web)}</a></div>`;
+  if(c.tipo)  items += `<div class="contact-item">🔗 &nbsp;<span>${escH(c.tipo)}</span></div>`;
+  if(c.nota)  items += `<div class="contact-item" style="font-style:italic;font-size:.76rem;margin-top:4px">💡 &nbsp;${escH(c.nota)}</div>`;
+  return items ? `<div class="contact-box"><div class="contact-label">✦ Contacto &amp; Cómo Aplicar</div>${items}</div>` : '';
+}
+
+function toggleCard(e, id){
+  e.stopPropagation();
+  document.querySelector(`.card[data-id="${id}"]`).classList.toggle('open');
+}
+function handleCardClick(e, id){
+  if(e.target.closest('.card-toggle,.cta-row,a,button')) return;
+  document.querySelector(`.card[data-id="${id}"]`).classList.toggle('open');
+}
+function copyLink(e, url){
+  e.stopPropagation();
+  navigator.clipboard.writeText(url).then(()=>{
+    const btn = e.currentTarget;
+    const orig = btn.innerHTML;
+    btn.textContent = '✓ Copiado';
+    btn.style.color = 'var(--mx)';btn.style.borderColor = 'var(--mx)';
+    setTimeout(()=>{ btn.innerHTML=orig;btn.style.color='';btn.style.borderColor=''; }, 1800);
+  });
+}
+
+function render(){
+  const list = getFiltered();
+  const grid = document.getElementById('grid');
+  document.getElementById('cnt').textContent = list.length;
+  if(!list.length){
+    grid.innerHTML = `<div class="empty"><span class="empty-icon">🔍</span><h3>Sin resultados</h3><p style="font-style:italic;color:var(--muted)">Prueba con otros filtros</p></div>`;
+    return;
+  }
+  grid.innerHTML = list.map(cardHTML).join('');
+}
+
+loadData();
+</script>
+</body>
+</html>
