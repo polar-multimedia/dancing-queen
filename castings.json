@@ -1,11 +1,11 @@
 {
-  "ultima_actualizacion": "2026-06-30T02:40:59.735171",
-  "total": 51,
+  "ultima_actualizacion": "2026-06-30T18:19:25.195320",
+  "total": 53,
   "castings": [
     {
-      "id": "at-argentina61-0",
-      "titulo": "Argentina61",
-      "descripcion": "Argentina61",
+      "id": "at-argentina77-0",
+      "titulo": "Argentina77",
+      "descripcion": "Argentina77",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -69,9 +69,9 @@
       ]
     },
     {
-      "id": "at-cooperativa42-3",
-      "titulo": "Cooperativa42",
-      "descripcion": "Cooperativa42",
+      "id": "at-cooperativa55-3",
+      "titulo": "Cooperativa55",
+      "descripcion": "Cooperativa55",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -91,9 +91,9 @@
       ]
     },
     {
-      "id": "at-remunerado15-4",
-      "titulo": "Remunerado15",
-      "descripcion": "Remunerado15",
+      "id": "at-remunerado18-4",
+      "titulo": "Remunerado18",
+      "descripcion": "Remunerado18",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -135,9 +135,9 @@
       ]
     },
     {
-      "id": "at-26062026-se-buscan-actores-y-actrices-de-30-a-35-años-para-o-6",
-      "titulo": "26/06/2026 - Se buscan actores y actrices de 30 a 35 años para obra de teatro",
-      "descripcion": "26/06/2026 - Se buscan actores y actrices de 30 a 35 años para obra de teatro",
+      "id": "at-29062026-se-buscan-actores-desde-25-años-para-ciclo-de-obras-6",
+      "titulo": "29/06/2026 - Se buscan actores desde 25 años para ciclo de obras btreves",
+      "descripcion": "29/06/2026 - Se buscan actores desde 25 años para ciclo de obras btreves",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -147,7 +147,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265957-actores-y-actrices-de-30-a-35-anos-para-obra-de-teatro",
+      "url": "https://www.alternativateatral.com/casting266009-actores-desde-25-anos-para-ciclo-de-obras-btreves",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -157,9 +157,9 @@
       ]
     },
     {
-      "id": "at-26062026-se-buscan-actores-de-25-a-45-años-para-comedia-tetr-7",
-      "titulo": "26/06/2026 - Se buscan actores de 25 a 45 años para comedia tetral",
-      "descripcion": "26/06/2026 - Se buscan actores de 25 a 45 años para comedia tetral",
+      "id": "at-29062026-se-buscan-actrices-de-25-a-45-años-para-obra-de-cic-7",
+      "titulo": "29/06/2026 - Se buscan actrices de 25 a 45 años para obra de ciclos breves",
+      "descripcion": "29/06/2026 - Se buscan actrices de 25 a 45 años para obra de ciclos breves",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -169,7 +169,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265956-actores-de-25-a-45-anos-para-comedia-tetral",
+      "url": "https://www.alternativateatral.com/casting266008-actrices-de-25-a-45-anos-para-obra-de-ciclos-breves",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -179,9 +179,9 @@
       ]
     },
     {
-      "id": "at-26062026-se-buscan-actores-elenco-masculino-para-comedia-tea-8",
-      "titulo": "26/06/2026 - Se buscan actores elenco masculino para comedia teatral",
-      "descripcion": "26/06/2026 - Se buscan actores elenco masculino para comedia teatral",
+      "id": "at-29062026-se-buscan-actores-y-actrices-de-20-a-35-años-para-v-8",
+      "titulo": "29/06/2026 - Se buscan actores y actrices de 20 a 35 años para vacaciones de invierno",
+      "descripcion": "29/06/2026 - Se buscan actores y actrices de 20 a 35 años para vacaciones de invierno",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -191,7 +191,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265952-actores-elenco-masculino-para-comedia-teatral",
+      "url": "https://www.alternativateatral.com/casting266004-actores-y-actrices-de-20-a-35-anos-para-vacaciones-de-invierno",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -201,9 +201,9 @@
       ]
     },
     {
-      "id": "at-26062026-se-busca-actor-de-30-a-55-años-con-tono-provinciano-9",
-      "titulo": "26/06/2026 - Se busca actor de 30 a 55 años con tono provinciano para obra de teatro",
-      "descripcion": "26/06/2026 - Se busca actor de 30 a 55 años con tono provinciano para obra de teatro",
+      "id": "at-29062026-se-busca-compañeroa-para-arte-callejero-independien-9",
+      "titulo": "29/06/2026 - Se busca compañero/a para arte callejero independiente en el subte",
+      "descripcion": "29/06/2026 - Se busca compañero/a para arte callejero independiente en el subte",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -213,7 +213,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265951-actor-de-30-a-55-anos-con-tono-provinciano-para-obra-de-teatro",
+      "url": "https://www.alternativateatral.com/casting266003-companeroa-para-arte-callejero-independiente-en-el-subte",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -223,9 +223,9 @@
       ]
     },
     {
-      "id": "at-26062026-se-busca-dirección-de-arte-de-todas-las-creaciones--10",
-      "titulo": "26/06/2026 - Se busca dirección de arte de todas las creaciones escénicas en Grupo TreV(e)",
-      "descripcion": "26/06/2026 - Se busca dirección de arte de todas las creaciones escénicas en Grupo TreV(e)",
+      "id": "at-29062026-se-busca-actriz-cantante-de-45-a-60-años-para-proye-10",
+      "titulo": "29/06/2026 - Se busca actriz cantante de 45 a 60 años para proyecto teatral",
+      "descripcion": "29/06/2026 - Se busca actriz cantante de 45 a 60 años para proyecto teatral",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -235,7 +235,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265934-direccion-de-arte-de-todas-las-creaciones-escenicas-en-grupo-treve",
+      "url": "https://www.alternativateatral.com/casting266001-actriz-cantante-de-45-a-60-anos-para-proyecto-teatral",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -245,9 +245,9 @@
       ]
     },
     {
-      "id": "at-25062026-se-busca-actor-de-40-a-45-años-para-obra-de-teatro-11",
-      "titulo": "25/06/2026 - Se busca actor de 40 a 45 años para obra de teatro",
-      "descripcion": "25/06/2026 - Se busca actor de 40 a 45 años para obra de teatro",
+      "id": "at-29062026-se-busca-actriz-para-rol-protagónico-de-22-a-35-año-11",
+      "titulo": "29/06/2026 - Se busca actriz para rol protagónico de 22 a 35 años para obra de teatro comedia romántica",
+      "descripcion": "29/06/2026 - Se busca actriz para rol protagónico de 22 a 35 años para obra de teatro comedia romántica",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -257,7 +257,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265926-actor-de-40-a-45-anos-para-obra-de-teatro",
+      "url": "https://www.alternativateatral.com/casting265999-actriz-para-rol-protagonico-de-22-a-35-anos-para-obra-de-teatro-comedia-romantica",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -267,9 +267,9 @@
       ]
     },
     {
-      "id": "at-25062026-se-buscan-actores-y-actrices-de-12-a-50-años-para-d-12",
-      "titulo": "25/06/2026 - Se buscan actores y actrices de 12 a 50 años para drama breve teatral",
-      "descripcion": "25/06/2026 - Se buscan actores y actrices de 12 a 50 años para drama breve teatral",
+      "id": "at-29062026-se-busca-asistente-de-dirección-para-ciclo-de-obras-12",
+      "titulo": "29/06/2026 - Se busca asistente de dirección para ciclo de obras breves",
+      "descripcion": "29/06/2026 - Se busca asistente de dirección para ciclo de obras breves",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -279,7 +279,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265923-actores-y-actrices-de-12-a-50-anos-para-drama-breve-teatral",
+      "url": "https://www.alternativateatral.com/casting265994-asistente-de-direccion-para-ciclo-de-obras-breves",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -289,9 +289,9 @@
       ]
     },
     {
-      "id": "at-25062026-se-busca-actriz-de-40-a-50-años-para-obra-de-teatro-13",
-      "titulo": "25/06/2026 - Se busca actriz de 40 a 50 años para obra de teatro",
-      "descripcion": "25/06/2026 - Se busca actriz de 40 a 50 años para obra de teatro",
+      "id": "at-29062026-se-busca-actor-y-actriz-de-21-a-45-años-para-los-ár-13",
+      "titulo": "29/06/2026 - Se busca actor y actriz de 21 a 45 años para Los Árboles Mueren de Pie",
+      "descripcion": "29/06/2026 - Se busca actor y actriz de 21 a 45 años para Los Árboles Mueren de Pie",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -301,7 +301,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265922-actriz-de-40-a-50-anos-para-obra-de-teatro",
+      "url": "https://www.alternativateatral.com/casting265993-actor-y-actriz-de-21-a-45-anos-para-los-arboles-mueren-de-pie",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -311,9 +311,9 @@
       ]
     },
     {
-      "id": "at-25062026-se-busca-actor-con-amplio-dominio-genero-dramático--14",
-      "titulo": "25/06/2026 - Se busca actor con amplio dominio genero dramático de 50 a 55 años  para puesta teatral y largo",
-      "descripcion": "25/06/2026 - Se busca actor con amplio dominio genero dramático de 50 a 55 años  para puesta teatral y largo",
+      "id": "at-29062026-se-busca-directora-de-escena-para-proyecto-de-teatr-14",
+      "titulo": "29/06/2026 - Se busca directora de escena para proyecto de teatro bio-documental",
+      "descripcion": "29/06/2026 - Se busca directora de escena para proyecto de teatro bio-documental",
       "empresa": "Alternativa Teatral",
       "mercado": "LATAM",
       "idioma": "español",
@@ -323,7 +323,7 @@
       "fecha_pub": "2026-06-30",
       "fecha_cierre": "2026-07-20",
       "remunerado": false,
-      "url": "https://www.alternativateatral.com/casting265921-actor-con-amplio-dominio-genero-dramatico-de-50-a-55-anos-para-puesta-teatral-y-largo",
+      "url": "https://www.alternativateatral.com/casting265986-directora-de-escena-para-proyecto-de-teatro-biodocumental",
       "url_directo": true,
       "fuente": "alternativateatral.com",
       "tags": [
@@ -531,13 +531,13 @@
       ]
     },
     {
-      "id": "bw-buffalo-theatre-ensemble-2026-27-season-0",
-      "titulo": "Buffalo Theatre Ensemble 2026-27 Season",
-      "descripcion": "Buffalo Theatre Ensemble 2026-27 Season Buffalo Theatre Ensemble · Equity Stage Managers · Glen Ellyn, IL · 7/14/2026 Get audition information",
+      "id": "bw-annie-0",
+      "titulo": "ANNIE",
+      "descripcion": "ANNIE Arts Center of Coastal Carolina · Equity Ensemble Dancers (Male Characters) · New York, NY · 8/5/2026 Get audition information",
       "empresa": "BroadwayWorld",
       "mercado": "USA",
       "idioma": "inglés",
-      "tipo_rol": "ensemble",
+      "tipo_rol": "bailarín/a",
       "ciudad": "New York / Nacional",
       "pais": "Estados Unidos",
       "fecha_pub": "2026-06-30",
@@ -554,7 +554,283 @@
       ]
     },
     {
-      "id": "bw-buffalo-theatre-ensemble-2026-27-season-1",
+      "id": "bw-annie-1",
+      "titulo": "ANNIE",
+      "descripcion": "ANNIE Arts Center of Coastal Carolina · Equity Ensemble Dancers (Female Characters) · New York, NY · 8/5/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "bailarín/a",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/ANNIE-Arts-Center-of-Coastal-Carolina-2026-51450",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-annie-2",
+      "titulo": "ANNIE",
+      "descripcion": "ANNIE Arts Center of Coastal Carolina · Equity Ensemble Singers (Female Characters) · New York, NY · 8/5/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "cantante",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/ANNIE-Arts-Center-of-Coastal-Carolina-2026-51449",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-annie-3",
+      "titulo": "ANNIE",
+      "descripcion": "ANNIE Arts Center of Coastal Carolina · Equity Ensemble Singers (Male Characters) · New York, NY · 8/5/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "cantante",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/ANNIE-Arts-Center-of-Coastal-Carolina-2026-51448",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-annie-4",
+      "titulo": "ANNIE",
+      "descripcion": "ANNIE Arts Center of Coastal Carolina · Equity Principal Actors · Hilton Head Island, SC · 8/1/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "actor/actriz",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/ANNIE-Arts-Center-of-Coastal-Carolina-2026-51447",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-sweeney-todd-5",
+      "titulo": "SWEENEY TODD",
+      "descripcion": "SWEENEY TODD San Francisco Playhouse · Equity Ensemble Dancers (All genders) · San Francisco, CA · 7/20/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "bailarín/a",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/ANNIE-Arts-Center-of-Coastal-Carolina-2026-51446",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-the-lightening-thief-6",
+      "titulo": "THE LIGHTENING THIEF",
+      "descripcion": "THE LIGHTENING THIEF Marriott Theatre · Equity Principal Actors · Submission · 7/10/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "actor/actriz",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/SWEENEY-TODD-San-Francisco-Playhouse-2026-51445",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-midnight-7",
+      "titulo": "MIDNIGHT",
+      "descripcion": "MIDNIGHT MIDNIGHT 1200 LLC · Equity Ensemble Dancers (All genders) · New York, NY · 7/13/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "bailarín/a",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/THE-LIGHTENING-THIEF-Marriott-Theatre-2026-51444",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-midnight-8",
+      "titulo": "MIDNIGHT",
+      "descripcion": "MIDNIGHT MIDNIGHT 1200 LLC · Equity Principal Actors · New York, NY · 7/9/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "actor/actriz",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/MIDNIGHT-MIDNIGHT-1200-LLC-2026-51443",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-midnight-9",
+      "titulo": "MIDNIGHT",
+      "descripcion": "MIDNIGHT MIDNIGHT 1200 LLC · Equity Stage Managers · New York, NY · 7/13/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "actor/actriz",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/MIDNIGHT-MIDNIGHT-1200-LLC-2026-51442",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-midnight-10",
+      "titulo": "MIDNIGHT",
+      "descripcion": "MIDNIGHT MIDNIGHT 1200 LLC · Equity Ensemble Dancers (All genders) · New York, NY · 7/13/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "bailarín/a",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/MIDNIGHT-MIDNIGHT-1200-LLC-2026-51441",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-midnight-11",
+      "titulo": "MIDNIGHT",
+      "descripcion": "MIDNIGHT MIDNIGHT 1200 LLC · Equity Ensemble Singers (All genders) · New York, NY · 7/10/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "cantante",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/MIDNIGHT-MIDNIGHT-1200-LLC-2026-51440",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-midnight-12",
+      "titulo": "MIDNIGHT",
+      "descripcion": "MIDNIGHT MIDNIGHT 1200 LLC · Equity Ensemble Singers (All genders) · New York, NY · 7/10/2026 Get audition information",
+      "empresa": "BroadwayWorld",
+      "mercado": "USA",
+      "idioma": "inglés",
+      "tipo_rol": "cantante",
+      "ciudad": "New York / Nacional",
+      "pais": "Estados Unidos",
+      "fecha_pub": "2026-06-30",
+      "fecha_cierre": "2026-07-30",
+      "remunerado": true,
+      "url": "https://www.broadwayworld.com/equity-audition/MIDNIGHT-MIDNIGHT-1200-LLC-2026-51439",
+      "url_directo": true,
+      "fuente": "broadwayworld.com",
+      "tags": [
+        "broadway",
+        "musical",
+        "usa",
+        "equity"
+      ]
+    },
+    {
+      "id": "bw-buffalo-theatre-ensemble-2026-27-season-14",
       "titulo": "Buffalo Theatre Ensemble 2026-27 Season",
       "descripcion": "Buffalo Theatre Ensemble 2026-27 Season Buffalo Theatre Ensemble · Equity Principal Actors · Glen Ellyn, IL · 7/14/2026 Get audition information",
       "empresa": "BroadwayWorld",
@@ -577,7 +853,7 @@
       ]
     },
     {
-      "id": "bw-buffalo-theatre-ensemble-2026-27-season-2",
+      "id": "bw-buffalo-theatre-ensemble-2026-27-season-15",
       "titulo": "Buffalo Theatre Ensemble 2026-27 Season",
       "descripcion": "Buffalo Theatre Ensemble 2026-27 Season Buffalo Theatre Ensemble · Equity Principal Actors · Glen Ellyn, IL · 7/10/2026 Get audition information",
       "empresa": "BroadwayWorld",
@@ -600,7 +876,7 @@
       ]
     },
     {
-      "id": "bw-buffalo-theatre-ensemble-2026-27-season-3",
+      "id": "bw-buffalo-theatre-ensemble-2026-27-season-16",
       "titulo": "Buffalo Theatre Ensemble 2026-27 Season",
       "descripcion": "Buffalo Theatre Ensemble 2026-27 Season Buffalo Theatre Ensemble · Equity Principal Actors · Glen Ellyn, IL · 7/9/2026 Get audition information",
       "empresa": "BroadwayWorld",
@@ -623,7 +899,7 @@
       ]
     },
     {
-      "id": "bw-cold-war-choir-practice-4",
+      "id": "bw-cold-war-choir-practice-17",
       "titulo": "COLD WAR CHOIR PRACTICE",
       "descripcion": "COLD WAR CHOIR PRACTICE Main Street Theater · Equity Principal Actors · Houston, TX · 7/13/2026 Get audition information",
       "empresa": "BroadwayWorld",
@@ -646,7 +922,7 @@
       ]
     },
     {
-      "id": "bw-cold-war-choir-practice-5",
+      "id": "bw-cold-war-choir-practice-18",
       "titulo": "COLD WAR CHOIR PRACTICE",
       "descripcion": "COLD WAR CHOIR PRACTICE Main Street Theater · Equity Principal Actors · Houston, TX · 7/12/2026 Get audition information",
       "empresa": "BroadwayWorld",
@@ -669,7 +945,7 @@
       ]
     },
     {
-      "id": "bw-the-blue-violinist-6",
+      "id": "bw-the-blue-violinist-19",
       "titulo": "THE BLUE VIOLINIST",
       "descripcion": "THE BLUE VIOLINIST Prism Stage Company · Equity Principal Actors · Submission · 7/13/2026 Get audition information",
       "empresa": "BroadwayWorld",
@@ -682,236 +958,6 @@
       "fecha_cierre": "2026-07-30",
       "remunerado": true,
       "url": "https://www.broadwayworld.com/equity-audition/COLD-WAR-CHOIR-PRACTICE-Main-Street-Theater-2026-51429",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-the-blue-violinist-7",
-      "titulo": "THE BLUE VIOLINIST",
-      "descripcion": "THE BLUE VIOLINIST Prism Stage Company · Equity Principal Actors · New York, NY · 7/10/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/THE-BLUE-VIOLINIST-Prism-Stage-Company-2026-51428",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-pippin-8",
-      "titulo": "PIPPIN",
-      "descripcion": "PIPPIN Quintessence Theatre Group · Equity Stage Managers · Submission · 7/31/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/THE-BLUE-VIOLINIST-Prism-Stage-Company-2026-51427",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-truly-howard-hughes-9",
-      "titulo": "TRULY, HOWARD HUGHES",
-      "descripcion": "TRULY, HOWARD HUGHES York Theatre Company · Equity Ensemble Dancers (All genders) · New York, NY · 7/10/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "bailarín/a",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/PIPPIN-Quintessence-Theatre-Group-2026-51426",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-truly-howard-hughes-10",
-      "titulo": "TRULY, HOWARD HUGHES",
-      "descripcion": "TRULY, HOWARD HUGHES York Theatre Company · Equity Ensemble Singers (All genders) · New York, NY · 7/10/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "cantante",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/TRULYHOWARD-HUGHES-York-Theatre-Company-2026-51425",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-the-lightening-thief-11",
-      "titulo": "THE LIGHTENING THIEF",
-      "descripcion": "THE LIGHTENING THIEF Marriott Theatre · Equity Principal Actors · Submission · 7/10/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/TRULYHOWARD-HUGHES-York-Theatre-Company-2026-51424",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-gloria-12",
-      "titulo": "GLORIA",
-      "descripcion": "GLORIA Second Stage Theater · Equity Stage Managers · Submission · 7/10/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/THE-LIGHTENING-THIEF-Marriott-Theatre-2026-51423",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-gloria-13",
-      "titulo": "GLORIA",
-      "descripcion": "GLORIA Second Stage Theater · Equity Principal Actors · New York, NY · 7/10/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/GLORIA-Second-Stage-Theater-2026-51422",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-new-theatre-restaurant-2026-27-season-14",
-      "titulo": "New Theatre Restaurant 2026-27 Season",
-      "descripcion": "New Theatre Restaurant 2026-27 Season New Theatre Restaurant · Equity Principal Actors · Kansas City, MO · 7/17/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/New-Theatre-Restaurant-2026-27-Season-New-Theatre-Restaurant-2026-51419",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-warriors-16",
-      "titulo": "WARRIORS",
-      "descripcion": "WARRIORS Producing Org TBD · Equity Principal Actors · New York, NY · 7/11/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/WARRIORS-Producing-Org-TBD-2026-51417",
-      "url_directo": true,
-      "fuente": "broadwayworld.com",
-      "tags": [
-        "broadway",
-        "musical",
-        "usa",
-        "equity"
-      ]
-    },
-    {
-      "id": "bw-truly-howard-hughes-18",
-      "titulo": "TRULY, HOWARD HUGHES",
-      "descripcion": "TRULY, HOWARD HUGHES York Theatre Company · Equity Principal Actors · New York, NY · 7/7/2026 Get audition information",
-      "empresa": "BroadwayWorld",
-      "mercado": "USA",
-      "idioma": "inglés",
-      "tipo_rol": "actor/actriz",
-      "ciudad": "New York / Nacional",
-      "pais": "Estados Unidos",
-      "fecha_pub": "2026-06-30",
-      "fecha_cierre": "2026-07-30",
-      "remunerado": true,
-      "url": "https://www.broadwayworld.com/equity-audition/PHILLY-CYCLE-NURSES-InterAct-Theatre-Company-2026-51414",
       "url_directo": true,
       "fuente": "broadwayworld.com",
       "tags": [
